@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drawing battle</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS Materialize  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <div class="row">
+        <!-- scoreboard -->
+        <div class="col s2">
+            <h3>Players</h3>
+            <ul class="collection">
+                <li class="collection-item avatar">
+                    <i class="unselectable material-icons circle amber">filter_1</i>
+                    <span class="title">Player1</span>
+                    <p>score: 500</p>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="unselectable material-icons circle grey lighten-1">filter_2</i>
+                    <span class="title">Player2</span>
+                    <p>score: 400</p>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="unselectable material-icons circle  deep-orange darken-4">filter_3</i>
+                    <span class="title">Player3</span>
+                    <p>score: 300</p>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="unselectable material-icons circle black">filter_4</i>
+                    <span class="title">Player4</span>
+                    <p>score: 200</p>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="unselectable material-icons circle black">filter_5</i>
+                    <span class="title">Player5</span>
+                    <p>score: 200</p>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="unselectable material-icons circle black">filter_6</i>
+                    <span class="title">Player6</span>
+                    <p>score: 200</p>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="unselectable material-icons circle black">filter_7</i>
+                    <span class="title">Player7</span>
+                    <p>score: 200</p>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="unselectable material-icons circle black">filter_8</i>
+                    <span class="title">Player8</span>
+                    <p>score: 200</p>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="unselectable material-icons circle black">filter_9</i>
+                    <span class="title">Player9</span>
+                    <p>score: 200</p>
+                </li>
+            </ul>
+            <h5 id="room-code"></h5>
+        </div>
+
+        <!-- canvas -->
+        <div class="col s7 section center">
+            <div class="" id="canvas-container"></div>
+
+            <!-- colors -->
+            <div id="colors">
+                <i class="color unselectable medium material-icons circle blue-grey lighten-4 white-text">brightness_1</i>
+                <i class="color unselectable medium material-icons black-text">brightness_1</i>
+                <i class="color unselectable medium material-icons green-text text-darken-4">brightness_1</i>
+                <i class="color unselectable medium material-icons green-text">brightness_1</i>
+                <i class="color unselectable medium material-icons teal-text text-darken-3">brightness_1</i>
+                <i class="color unselectable medium material-icons cyan-text">brightness_1</i>
+                <i class="color unselectable medium material-icons blue-text text-darken-4">brightness_1</i>
+                <i class="color unselectable medium material-icons blue-text">brightness_1</i>
+                <i class="color unselectable medium material-icons blue-text text-lighten-3">brightness_1</i>
+                <i class="color unselectable medium material-icons purple-text text-darken-4">brightness_1</i>
+                <i class="color unselectable medium material-icons pink-text">brightness_1</i>
+                <i class="color unselectable medium material-icons red-text text-darken-1">brightness_1</i>
+                <i class="color unselectable medium material-icons red-text text-darken-4">brightness_1</i>
+                <i class="color unselectable medium material-icons brown-text text-darken-2">brightness_1</i>
+                <i class="color unselectable medium material-icons orange-text text-darken-2">brightness_1</i>
+                <i class="color unselectable medium material-icons yellow-text text-accent-4">brightness_1</i>
+            </div>
+
+
+        </div>
+        <!-- chat -->
+        <div class="col s3 section">
+            <h3 id="display-name"></h3>
+            <div id="msg-container">
+                <div class="card light-blue lighten-5">hi</div>
+                <div class="card light-blue lighten-5">hi</div>
+            </div>
+
+            <!-- chat input -->
+            <form id="chat-form">
+                <div class="row">
+                    <div class="col s8"><input type="text" name="msg" id="msg-chat-form"></div>
+                    <div class="col s4">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">send
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+    </div>
+
+
+
+    <!-- Compiled and minified JavaScript Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- p5.js -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+    <!-- DOMPurify -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.7/purify.min.js"
+        integrity="sha512-srKA/HGYuusMcB2uqsvHKmqqE39vHU74WIuPBaKS5+wtfI6NquGXQtby+eM7o139a7Gt3szcHS09wou8GK4IJQ=="
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="canvas.js"></script>
+</body>
+
+</html>

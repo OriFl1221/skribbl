@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hub</title>
+    <!-- Materialize  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <!-- icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="center-div">
+        <!-- join room -->
+        <div class="row">
+            <div class="col s6">
+                <h1>Join Room</h1>
+                <form method="GET" action="/join" id="join-room-form">
+                    <div class="row">
+                        <div class="col s8 input-feild">
+                            <input name="id" type="text" id="room-id-join">
+                            <label for="room-id-join">Room ID</label>
+                        </div>
+                        <div class="input-feild">
+                            <input class="btn waves-effect waves-light" type="submit" value="Join">
+                        </div>
+                        
+                        <!-- exist in order to inform server of selected name -->
+                        <input type="hidden" id="join-room-name" name="name">
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- create room -->
+            <div class="col s6">
+                <h1>Create Room</h1>
+                <form method="GET" action="/create" id="create-room-form">
+                    <div class="input-feild">
+                        <input class="btn waves-effect waves-light" type="submit" value="Create">
+                    </div>
+                    <!-- exist in order to inform server of selected name -->
+                    <input type="hidden" name="name" id="create-room-name">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Enter Name</h1>
+        <!-- username input -->
+        <input type="text" name="msg" id="name-input" placeholder="type here your username">
+
+    </div>
+    <!-- Materialize  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script>
+        const createName = document.getElementById('create-room-name');
+        const joinName = document.getElementById('join-room-name');
+        
+        const nameInput = document.getElementById('name-input');
+        
+        // when name is typed update the hidden inputs
+        nameInput.oninput = e => {
+            joinName.value = nameInput.value;
+            createName.value = nameInput.value;
+        }
+    </script>
+</body>
+
+</html>
